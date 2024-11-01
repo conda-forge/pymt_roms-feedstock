@@ -1,5 +1,5 @@
 {% set name = "pymt_roms" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/gantian127/{{ name }}/archive/v{{ version }}.tar.gz
-  sha256: 0056c87c371f5174f03d61673cd0c9b9518d93457c11f286096ca3a0514eb7c3
+  sha256: e7ce0fafe4b4f3df747aeca4a81587519be7949bcd31018315373030ccc4ebe2
 
 build:
   noarch: python
