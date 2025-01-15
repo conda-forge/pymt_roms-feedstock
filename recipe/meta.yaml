@@ -1,3 +1,4 @@
+{% set python_min = '3.10' %}
 {% set name = "pymt_roms" %}
 {% set version = "0.1.1" %}
 
@@ -11,16 +12,16 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.10
+    - python {{ python_min }}
     - pip
     - setuptools
   run:
-    - python >=3.10
+    - python >={{ python_min }}
     - bmi_roms >=0.1.0
     - numpy
 
@@ -28,6 +29,7 @@ requirements:
 test:
   requires:
     - setuptools
+    - python {{ python_min }}
   imports:
     - pymt_roms
 
